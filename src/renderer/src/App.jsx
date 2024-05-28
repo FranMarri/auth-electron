@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
+import Dashboard  from './components/dashboard';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Header from './components/Header';
@@ -14,6 +14,7 @@ export default function App() {
           <Route  path="/" element={<Login />} />
           <Route  path="/login" element={<Login />}></Route>
           <Route  path="/register" element={<Register />}></Route>
+          <Route  path="/dashboard" element={<Dashboard/>}></Route>
       </Routes>
     </div>
     </BrowserRouter>
