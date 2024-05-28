@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    background-color: #4f699e; 
+    background-color: hsl(220, 33%, 46%); 
   }
 
 .login-form {
@@ -34,6 +34,6 @@ body {
   }
   
   .login-btn:hover {
-    background-color: #3182ce;
+    background-color: #9621e4;
   }
   

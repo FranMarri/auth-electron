@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useNavigate } from 'react-router-dom';
 import * as yup from 'yup';
-import axios from 'axios';
+import API from '../utils/api';
 
 const schema = yup.object().shape({
   email: yup.string()
@@ -22,7 +22,7 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('http://localhost:3000/api/login', data);
+      const response = await API.post('/login', data);
       localStorage.setItem('token', response.data.token);
       navigate('/dashboard');
     } catch (error) {
